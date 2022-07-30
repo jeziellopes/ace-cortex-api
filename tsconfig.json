@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "lib": ["es6"],
+    "module": "commonjs", 
+    "typeRoots": [
+      "./node_modules/@types",
+    ],
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "outDir": "./dist", 
+    "removeComments": true,
+    "esModuleInterop": true, 
+    "forceConsistentCasingInFileNames": true,
+    "strict": true, 
+    "strictPropertyInitialization": false,
+    "skipLibCheck": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@*": ["./*"],
+    },
+  }
+}

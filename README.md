@@ -39,11 +39,11 @@
 ## How to start locally
 
 ```bash
-  # Install dependencies
-  yarn
-
   # Change to develop branch
   git checkout develop
+
+  # Install dependencies
+  yarn
 
   # Generate .env
   yarn env:copy
@@ -52,6 +52,19 @@
   yarn dev
 ```
 ---
+
+## How to start Prisma Locally
+
+```bash
+  # Generate Prisma Client 
+  yarn prisma:generate
+  
+  # Migrate and reset database (approval needed)
+  yarn prisma:migrate:reset
+  
+  # Seed database with data
+  yarn prisma:seed
+```
 
 ## How to test locally
 

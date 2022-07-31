@@ -25,11 +25,12 @@
 
 ```json
 {
-  "name": "Ace Cortex",
-  "taxId": "12580915000100",
-  "about": "Queremos que o nosso trabalho contribua para um Brasil mais competitivo em âmbito global, levando nossa identidade e modo de fazer para empresas mundo afora. Vamos impactar negócios de forma que sejam reconhecidos como grandes exemplos de inovação, tornando-se referência para outros negócios.",
-  "demand": "13 Bilhões",
-  "annual_income": "Acima de R$ 500 milhões",
+  name: "Ace Cortex",
+  photo: "https://acestartups.com.br/wp-content/uploads/2021/06/Wallpaper-2-1024x576.png",
+  taxId: "12580915000100",
+  about: "A ACE Cortex desenvolve empresas, pessoas e negócios por meio da inovação, capacitando, solucionando desafios, gerando resultados e promovendo a transformação cultural.",
+  demand: 100000000,
+  annualIncome: "Acima de R$ 50 milhões"
 }
 ```
 
@@ -70,7 +71,7 @@
 - In order to prevent ```CORS``` errors, run ```API Requests``` only from allowed origins or change ```allowedOrigins``` inside ```@main/config/cors.config.ts```
 
 ```js
-const allowedOrigins = ['http://localhost:3000']
+const allowedOrigins = ["http://localhost:3000"]
 ```
 
 

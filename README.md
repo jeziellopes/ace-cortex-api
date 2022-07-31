@@ -45,6 +45,16 @@ API Endpoints Naming following [REST Resource Naming Guide](https://restfulapi.n
 
 ---
 
+## Running PostgreSQL Docker Container
+
+- ```Warn:``` stop any pg containers already on port 5432
+
+```bash
+  # Run pg docker container
+  docker-compose up -d
+```
+---
+
 ## How to start locally
 
 ```bash

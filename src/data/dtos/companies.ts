@@ -1,3 +1,3 @@
 export type LoadParamsDTO = {
-  companyId: string
+  companyId: number
 }

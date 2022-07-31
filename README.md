@@ -36,6 +36,15 @@
 
 ---
 
+## API Endpoints Naming
+
+API Endpoints Naming following [REST Resource Naming Guide](https://restfulapi.net/resource-naming):
+
+- List all companies - ```/api/companies```
+- Show company by id - ```/api/companies/:companyId```
+
+---
+
 ## How to start locally
 
 ```bash

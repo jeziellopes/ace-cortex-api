@@ -1,0 +1,33 @@
+version: '3.7'
+services:
+  postgres:
+    image: postgres:alpine3.16
+    restart: always
+    container_name: acecortex_db
+    environment:
+      POSTGRES_DB: 'acecortex_db'
+      POSTGRES_USER: 'aceadmin'
+      POSTGRES_PASSWORD: 'aceadminpass'
+      POSTGRES_ROOT_PASSWORD: 'aceadminpass@root'
+      PGDATA: /data/postgres
+      TZ: 'UTC'
+    logging:
+      options:
+        max-size: 10m
+        max-file: '3'
+    ports:
+      - '5432:5432'
+    expose:
+      - '5432'
+    volumes:
+      - pg:/data/postgres
+    networks:
+      - ace
+
+volumes:
+  pg:
+    name: ace
+
+networks:
+  ace:
+    name: ace

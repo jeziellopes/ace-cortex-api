@@ -25,15 +25,34 @@
 
 ```json
 {
-  name: "Ace Cortex",
-  photo: "https://acestartups.com.br/wp-content/uploads/2021/06/Wallpaper-2-1024x576.png",
-  taxId: "12580915000100",
-  about: "A ACE Cortex desenvolve empresas, pessoas e negócios por meio da inovação, capacitando, solucionando desafios, gerando resultados e promovendo a transformação cultural.",
-  demand: 100000000,
-  annualIncome: "Acima de R$ 50 milhões"
+  "name": "Ace Cortex",
+  "photo": "https://acestartups.com.br/wp-content/uploads/2021/06/Wallpaper-2-1024x576.png",
+  "taxId": "12580915000100",
+  "about": "A ACE Cortex desenvolve empresas, pessoas e negócios por meio da inovação, capacitando, solucionando desafios, gerando resultados e promovendo a transformação cultural.",
+  "demand": 100000000,
+  "annualIncome": "Acima de R$ 50 milhões"
 }
 ```
 
+---
+
+## API Endpoints Naming
+
+API Endpoints Naming following [REST Resource Naming Guide](https://restfulapi.net/resource-naming):
+
+- List all companies - ```/api/companies```
+- Show company by id - ```/api/companies/:companyId```
+
+---
+
+## Running PostgreSQL Docker Container
+
+- ```Warn:``` stop any pg containers already on port 5432
+
+```bash
+  # Run pg docker container
+  docker-compose up -d
+```
 ---
 
 ## How to start locally

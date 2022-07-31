@@ -26,23 +26,43 @@
 ```json
 {
   "name": "Ace Cortex",
+  "photo": "https://acestartups.com.br/wp-content/uploads/2021/06/Wallpaper-2-1024x576.png",
   "taxId": "12580915000100",
-  "about": "Queremos que o nosso trabalho contribua para um Brasil mais competitivo em âmbito global, levando nossa identidade e modo de fazer para empresas mundo afora. Vamos impactar negócios de forma que sejam reconhecidos como grandes exemplos de inovação, tornando-se referência para outros negócios.",
-  "demand": "13 Bilhões",
-  "annual_income": "Acima de R$ 500 milhões",
+  "about": "A ACE Cortex desenvolve empresas, pessoas e negócios por meio da inovação, capacitando, solucionando desafios, gerando resultados e promovendo a transformação cultural.",
+  "demand": 100000000,
+  "annualIncome": "Acima de R$ 50 milhões"
 }
 ```
 
 ---
 
+## API Endpoints Naming
+
+API Endpoints Naming following [REST Resource Naming Guide](https://restfulapi.net/resource-naming):
+
+- List all companies - ```/api/companies```
+- Show company by id - ```/api/companies/:companyId```
+
+---
+
+## Running PostgreSQL Docker Container
+
+- ```Warn:``` stop any pg containers already on port 5432
+
+```bash
+  # Run pg docker container
+  docker-compose up -d
+```
+---
+
 ## How to start locally
 
 ```bash
-  # Install dependencies
-  yarn
-
   # Change to develop branch
   git checkout develop
+
+  # Install dependencies
+  yarn
 
   # Generate .env
   yarn env:copy
@@ -51,6 +71,19 @@
   yarn dev
 ```
 ---
+
+## How to start Prisma Locally
+
+```bash
+  # Generate Prisma Client 
+  yarn prisma:generate
+  
+  # Migrate and reset database (approval needed)
+  yarn prisma:migrate:reset
+  
+  # Seed database with data
+  yarn prisma:seed
+```
 
 ## How to test locally
 
@@ -70,7 +103,7 @@
 - In order to prevent ```CORS``` errors, run ```API Requests``` only from allowed origins or change ```allowedOrigins``` inside ```@main/config/cors.config.ts```
 
 ```js
-const allowedOrigins = ['http://localhost:3000']
+const allowedOrigins = ["http://localhost:3000"]
 ```
 
 

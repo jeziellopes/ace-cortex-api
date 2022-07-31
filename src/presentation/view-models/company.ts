@@ -2,18 +2,20 @@ import { Company } from '@domain/entities'
 
 export class CompanyViewModel {
   name: string
-  tax_id: string
-  demand: string
-  annual_income: string
+  photo: string
+  taxId: string
+  demand: number
+  annualIncomeId: number
   about: string
 
   static map (entity: Company): CompanyViewModel {
     return {
       name: entity.name,
-      tax_id: entity.tax_id,
+      about: entity.about,
+      taxId: entity.taxId,
       demand: entity.demand,
-      annual_income: entity.annual_income,
-      about: entity.about
+      annualIncomeId: entity.annualIncomeId,
+      photo: entity.photo
     }
   }
 

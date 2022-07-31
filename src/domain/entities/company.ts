@@ -1,7 +1,8 @@
-export type Company = {
+export class Company {
   name: string
-  tax_id: string
-  demand: string
-  annual_income: string
+  taxId: string
+  demand: number
+  annualIncomeId: number
   about: string
+  photo: string
 }

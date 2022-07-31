@@ -1,0 +1,29 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "windows"]
+}
+
+model Company {
+  id             Int          @id @default(autoincrement())
+  taxId          String       @unique
+  name           String
+  about          String
+  demand         Int
+  annualIncomeId Int
+  annualIncome   AnnualIncome @relation(fields: [annualIncomeId], references: [id])
+  photo          String
+}
+
+model AnnualIncome {
+  id          Int       @id @default(autoincrement())
+  description String
+  Company     Company[]
+}

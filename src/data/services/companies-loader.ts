@@ -1,7 +1,7 @@
 
 import { CompaniesLoaderRepository } from '@data/contracts'
-import { LoadParamsDTO } from '@data/dtos'
-import { Company } from '@domain/entities'
+import { LoadCompaniesBodyDTO } from '@data/dtos'
+import { CompanyModel } from '@data/models'
 import { CompaniesLoader } from '@domain/usecases'
 
 export class CompaniesLoaderService implements CompaniesLoader {
@@ -9,7 +9,7 @@ export class CompaniesLoaderService implements CompaniesLoader {
     this.companiesLoaderRepository = companiesLoaderRepository
   }
 
-  async load (params: LoadParamsDTO): Promise<Company[]> {
+  async load (params: LoadCompaniesBodyDTO): Promise<CompanyModel[]> {
     return this.companiesLoaderRepository.loadCompanies(params)
   }
 }

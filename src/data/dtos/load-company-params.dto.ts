@@ -2,10 +2,10 @@ export class LoadCompanyRequestParams {
   companyId: string
 }
 
-export class LoadParamsDTO {
+export class LoadCompanyParamsDTO {
   companyId: number
 
-  static map (entity: LoadCompanyRequestParams): LoadParamsDTO {
+  static map (entity: LoadCompanyRequestParams): LoadCompanyParamsDTO {
     return {
       companyId: Number(entity.companyId)
     }

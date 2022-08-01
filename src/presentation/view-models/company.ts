@@ -11,7 +11,7 @@ export class CompanyViewModel {
 
   static map (entity: CompanyModel): CompanyViewModel {
     return {
-      id: entity.id,
+      id: String(entity.id),
       name: entity.name,
       about: entity.about,
       taxId: entity.taxId,

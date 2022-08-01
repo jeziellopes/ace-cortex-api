@@ -11,9 +11,12 @@ export class LoadCompaniesController implements Controller {
 
   async handle (httpRequest: HttpRequest): Promise<HttpResponse<CompanyViewModel[]>> {
     try {
-      const companies = await this.companiesLoader.load(httpRequest.params)
+      const companies = await this.companiesLoader.load(httpRequest.body)
 
-      return ok(CompanyViewModel.mapCollection(companies))
+      return ok({
+        companies: CompanyViewModel.mapCollection(companies),
+        nextId: (companies.pop()?.id || -1) + 1
+      })
     } catch (error) {
       return serverError(error as Error)
     }

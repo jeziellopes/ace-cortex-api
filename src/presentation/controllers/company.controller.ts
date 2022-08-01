@@ -1,4 +1,4 @@
-import { LoadCompanyParamsDTO } from '@data/dtos'
+import { ShowCompanyParamsDTO } from '@data/dtos'
 import { EmptyCompanyIdError } from '@domain/errors/empty-company-id'
 import { CompanyShow } from '@domain/usecases'
 import { Controller, HttpRequest, HttpResponse, ok, serverError } from '@presentation/contracts'
@@ -11,7 +11,7 @@ export class ShowCompanyController implements Controller {
 
   async handle (httpRequest: HttpRequest): Promise<HttpResponse<CompanyViewModel>> {
     try {
-      const company = await this.companyShow.show(LoadCompanyParamsDTO.map(httpRequest.params))
+      const company = await this.companyShow.show(ShowCompanyParamsDTO.map(httpRequest.params))
 
       if (httpRequest.params === undefined) {
         throw new EmptyCompanyIdError()

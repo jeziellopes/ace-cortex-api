@@ -1,6 +1,7 @@
 import { CompanyModel } from '@data/models'
 
 export class CompanyViewModel {
+  id: string
   name: string
   photo: string
   taxId: string
@@ -10,6 +11,7 @@ export class CompanyViewModel {
 
   static map (entity: CompanyModel): CompanyViewModel {
     return {
+      id: entity.id,
       name: entity.name,
       about: entity.about,
       taxId: entity.taxId,

@@ -7,16 +7,19 @@ const config = {
     'src/**/**/*.ts'
   ],
   coveragePathIgnorePatterns: [
+    '.entity.ts',
+    '.model.ts',
     '.adapter.ts',
     '.config.ts',
     '.middleware.ts',
     '.route.ts',
     '.dto.ts',
-    'index.ts',
-    'server.ts',
+    '.usecase.ts',
+    '.contract.ts',
     '.controller.ts',
-    'company.ts',
-    'companies.ts'
+    '.repository.ts',
+    'index.ts',
+    'server.ts'
   ],
   coverageThreshold: {
     global: {

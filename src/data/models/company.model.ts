@@ -1,4 +1,4 @@
-import { AnnualIncomeModel } from '@data/models/annualIncome'
+import { AnnualIncomeModel } from '@data/models/annualIncome.model'
 
 export type CompanyModel = {
   id: number,

@@ -1,1 +1,1 @@
-export * from '@domain/entities/company'
+export * from '@domain/entities/company.entity'

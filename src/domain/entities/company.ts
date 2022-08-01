@@ -2,7 +2,7 @@ export class Company {
   name: string
   taxId: string
   demand: number
-  annualIncomeId: number
+  annualIncome: string
   about: string
   photo: string
 }

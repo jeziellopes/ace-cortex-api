@@ -2,4 +2,8 @@ import { PrismaClient } from '@prisma/client'
 
 const prisma = new PrismaClient()
 
-export const loadCompaniesPrismaDataSource = async () => prisma.company.findMany()
+export const loadCompaniesPrismaDataSource = async () => {
+  return prisma.company.findMany(
+    { include: { annualIncome: true } }
+  )
+}

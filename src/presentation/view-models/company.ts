@@ -1,25 +1,25 @@
-import { Company } from '@domain/entities'
+import { CompanyModel } from '@data/models'
 
 export class CompanyViewModel {
   name: string
   photo: string
   taxId: string
   demand: number
-  annualIncomeId: number
+  annualIncome: string
   about: string
 
-  static map (entity: Company): CompanyViewModel {
+  static map (entity: CompanyModel): CompanyViewModel {
     return {
       name: entity.name,
       about: entity.about,
       taxId: entity.taxId,
       demand: entity.demand,
-      annualIncomeId: entity.annualIncomeId,
+      annualIncome: entity.annualIncome?.description,
       photo: entity.photo
     }
   }
 
-  static mapCollection (entities: Company[]): CompanyViewModel[] {
+  static mapCollection (entities: CompanyModel[]): CompanyViewModel[] {
     return entities.map(CompanyViewModel.map)
   }
 }

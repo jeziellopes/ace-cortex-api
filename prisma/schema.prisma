@@ -13,7 +13,7 @@ generator client {
 
 model Company {
   id             Int          @id @default(autoincrement())
-  taxId          String       @unique
+  taxId          String
   name           String
   about          String
   demand         Int

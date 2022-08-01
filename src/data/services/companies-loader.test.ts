@@ -12,7 +12,7 @@ describe('Data', () => {
   test('Companies loader service instance', () => {
     const fakeRepo = new FakeCompaniesLoaderRepository()
     const companiesLoader = new CompaniesLoaderService(fakeRepo)
-    const sut = companiesLoader.load()
+    const sut = companiesLoader.load({ limit: 8, cursor: 0 })
     expect(sut).toBeInstanceOf(Promise<Company[]>)
   })
 })

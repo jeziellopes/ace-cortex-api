@@ -11,6 +11,7 @@ const config = {
     '.config.ts',
     '.middleware.ts',
     '.route.ts',
+    '.dto.ts',
     'index.ts',
     'server.ts',
     '.controller.ts',

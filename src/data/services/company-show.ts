@@ -1,7 +1,7 @@
 
 import { CompanyShowRepository } from '@data/contracts'
-import { LoadParamsDTO } from '@data/dtos'
-import { Company } from '@domain/entities'
+import { LoadCompanyParamsDTO } from '@data/dtos'
+import { CompanyModel } from '@data/models'
 import { CompanyShow } from '@domain/usecases'
 
 export class CompanyShowService implements CompanyShow {
@@ -9,7 +9,7 @@ export class CompanyShowService implements CompanyShow {
     this.companyShowRepository = companyShowRepository
   }
 
-  async show (params: LoadParamsDTO): Promise<Company> {
+  async show (params: LoadCompanyParamsDTO): Promise<CompanyModel> {
     return this.companyShowRepository.showCompany(params)
   }
 }

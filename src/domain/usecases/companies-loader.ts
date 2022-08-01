@@ -1,6 +1,6 @@
-import { LoadParamsDTO } from '@data/dtos'
-import { Company } from '@domain/entities'
+import { LoadCompaniesBodyDTO } from '@data/dtos'
+import { CompanyModel } from '@data/models'
 
 export interface CompaniesLoader {
-  load: (params: LoadParamsDTO) => Promise<Company[]>
+  load: (params: LoadCompaniesBodyDTO) => Promise<CompanyModel[]>
 }

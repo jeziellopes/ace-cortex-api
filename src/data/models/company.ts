@@ -1,3 +1,11 @@
-import { Company } from '@domain/entities'
+import { AnnualIncomeModel } from '@data/models/annualIncome'
 
-export type CompanyModel = Company
+export type CompanyModel = {
+  id: number,
+  name: string
+  taxId: string
+  demand: number
+  annualIncome: AnnualIncomeModel
+  about: string
+  photo: string
+}

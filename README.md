@@ -36,12 +36,21 @@
 
 ---
 
-## API Endpoints Naming
+## API Endpoints
 
 API Endpoints Naming following [REST Resource Naming Guide](https://restfulapi.net/resource-naming):
 
-- List all companies - ```/api/companies```
-- Show company by id - ```/api/companies/:companyId```
+- POST - ```/api/companies``` - List all companies
+
+- Request Body
+```js
+{
+  limit: 8, // number of companies per request
+  cursor: 1 // initial position to retrieve data
+}
+```
+
+- GET - ```/api/companies/:companyId``` - Show company by id
 
 ---
 
